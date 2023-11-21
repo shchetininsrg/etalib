@@ -1,0 +1,105 @@
+
+body {
+	font-family: 'Press Start 2P' !important;
+	background: #212121 !important;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+p {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 20px !important; 
+}
+
+.card1 {
+	width: 200px;
+  	background: #f5f5f5;
+  	box-shadow: 0 10px 20px rgba(0,0,0,.3);
+  	overflow: hidden;
+	border: 3px dotted transparent;
+  	border-radius: 5px;
+  	padding: 25px;
+  	text-align: center;
+  	z-index: 2;
+	margin-right: 20px;
+	
+}
+
+.item {
+	display: flex;
+}
+
+.card1:hover {
+	border: 3px dotted black;
+}
+
+code {
+	border-radius: 5px;
+	background: #2f2f2f;
+	padding: 1em;
+	font-size: 14px;
+	color: #abb2bf;
+	overflow-x: auto;
+	display: block;
+}
+
+.but_cop {
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+}
+
+.but_gen {
+	background-color: #FF4242; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+input[type="text"] {
+	border: 1px solid #cccccc; 
+	border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-khtml-border-radius: 3px; 
+	background: #ffffff !important; 
+	outline: none; 
+	height: 35px; 
+	width: 350px; 
+	color: #212121; 
+	font-size: 11px; 
+	font-family: 'Press Start 2P';
+	text-align: center;
+ }
+
+ input::placeholder {
+	color: #3f3f3f;
+	text-align: center;
+  }
+
+  input:focus{
+	color: #3f3f3f;
+	text-align: center;
+  }
+
+ .p_label{
+	color: white;
+	font-size: 14px;
+ }

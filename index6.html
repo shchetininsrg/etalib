@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Линкбилдер</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<br><br>
+        <div class="row">
+            <br><br>
+            <a style="color: white !important; font-size: 16px;" href="index.html">&lt;- НАЗАД</a>
+        </div>
+
+		<div class="row">
+
+		<div class="">
+			<br>
+				
+			<br><br>
+		</div>
+
+			<div class="row">
+				<ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+					<li class="nav-item" role="presentation">
+					  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Телефон</button>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Telegram</button>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Viber</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-wa-tab" data-bs-toggle="pill" data-bs-target="#pills-wa" type="button" role="tab" aria-controls="pills-wa" aria-selected="false">WhatsApp</button>
+					  </li>
+				  </ul>
+				  <div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+						<br>
+						<input placeholder="Номер телефона +79999999999" type="text" id="pop">
+						<br><br>
+						<code id="res2" class="css" style="font-family:monospace;">
+							tel:<span id="tel"></span>
+						</code>
+						<br>
+						<div class="row">
+							<div class="col-12">
+								<button class="but_gen" onclick="generate()">Сгенерировать</button>
+								<button class="but_cop" onclick="copyr()" id="copyy">Скопировать</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+						<br>
+						<input placeholder="Ник в telegram" type="text" id="tg1">
+						<br><br>
+						<code id="res3" class="css" style="font-family:monospace;">
+							https://t.me/<span id="tg"></span>
+						</code>
+						<br>
+						<div class="row">
+							<div class="col-12">
+								<button class="but_gen" onclick="generate1()">Сгенерировать</button>
+								<button class="but_cop" onclick="copyr()" id="copyy1">Скопировать</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<br>
+						<input placeholder="Номер телефона только цифры" type="text" id="vb1">
+						<br><br>
+						<code id="res4" class="css" style="font-family:monospace;">
+							viber://chat/?number=%2B<span id="vb"></span>
+						</code>
+						<br>
+						<div class="row">
+							<div class="col-12">
+								<button class="but_gen" onclick="generate2()">Сгенерировать</button>
+								<button class="but_cop" onclick="copyr()" id="copyy2">Скопировать</button>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-wa" role="tabpanel" aria-labelledby="pills-wa-tab">
+						<br>
+						<input placeholder="Номер телефона только цифры" type="text" id="wa1">
+						<br><br>
+						<code id="res5" class="css" style="font-family:monospace;">
+							https://wa.me/<span id="wa"></span>
+						</code>
+						<br>
+						<div class="row">
+							<div class="col-12">
+								<button class="but_gen" onclick="generate3()">Сгенерировать</button>
+								<button class="but_cop" onclick="copyr()" id="copyy3">Скопировать</button>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+
+
+			<div class="col-12">
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		function generate () {
+	var pop1 = document.getElementById('pop').value;
+	document.getElementById('tel').innerHTML = pop1;
+}
+function generate1 () {
+	var pop2 = document.getElementById('tg1').value;
+	document.getElementById('tg').innerHTML = pop2;
+}
+
+function generate2 () {
+	var pop2 = document.getElementById('vb1').value;
+	document.getElementById('vb').innerHTML = pop2;
+}
+
+function generate3 () {
+	var pop2 = document.getElementById('wa1').value;
+	document.getElementById('wa').innerHTML = pop2;
+}
+
+	</script>
+
+	<script>
+	$('#copyy').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#res2').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+
+</script>
+
+<script>
+		$('#copyy1').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#res3').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+</script>
+	
+<script>
+	$('#copyy2').click(function() {
+	var $temp = $("<input>");
+	$("body").append($temp);
+	$temp.val($('#res4').text()).select();
+	document.execCommand("copy");
+	$temp.remove();
+
+	$(this).text('У тебя все получилось');
+});
+</script>
+
+<script>
+	$('#copyy3').click(function() {
+	var $temp = $("<input>");
+	$("body").append($temp);
+	$temp.val($('#res5').text()).select();
+	document.execCommand("copy");
+	$temp.remove();
+
+	$(this).text('У тебя все получилось');
+});
+</script>
+</body>
+</html>

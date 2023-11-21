@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Динамические даты</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+        <br><br>
+        <div class="row">
+            <br><br>
+            <a style="color: white !important; font-size: 16px;" href="index.html">&lt;- НАЗАД</a>
+        </div>
+		<div class="row">
+			<div class="col-12">
+			<!--	<button style="color:red; font-size:30px" onclick="generate()">Сгенерировать</button> /!-->
+			<!--<button style="color:green; font-size:30px" onclick="copyr()" id="copyy">Скопировать</button> !-->
+
+				<h2 style="color: white; margin-top: 40px;">Выбери месяц</h2> <br> <br>
+			<!--	<input type="text" id="pop"> !-->
+			</div>
+			<div class="col-12">
+               
+
+				<nav>
+  					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    					<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Ноябрь</button>
+    					<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Декабрь</button>
+    					<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Январь</button>
+  					</div>
+				</nav>
+					<div class="tab-content" id="nav-tabContent">
+  					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <br><br>
+                        <button class="but_cop" onclick="copyr()" id="copyy">Скопировать</button>
+                        <br><br>
+  						<code class="html5" id="nov" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span>&gt;</span>
+$(document).ready(function() {
+//Создаём список дат формата Y-M-D
+&nbsp;
+let daTeMass = [ 
+    ['2022-11-01' , '1 ноября 2022'],
+    ['2022-11-02' , '2 ноября 2022'],
+    ['2022-11-03' , '3 ноября 2022'],
+    ['2022-11-04' , '4 ноября 2022'],
+    ['2022-11-05' , '5 ноября 2022'],
+    ['2022-11-07' , '6 ноября 2022'],
+    ['2022-11-07' , '7 ноября 2022'],
+    ['2022-11-08' , '8 ноября 2022'],
+    ['2022-11-09' , '9 ноября 2022'],
+    ['2022-11-10' , '10 ноября 2022'],
+    ['2022-11-11' , '11 ноября 2022'],
+    ['2022-11-12' , '12 ноября 2022'],
+    ['2022-11-13' , '13 ноября 2022'],
+    ['2022-11-14' , '14 ноября 2022'],
+    ['2022-11-15' , '15 ноября 2022'],
+    ['2022-11-16' , '16 ноября 2022'],
+    ['2022-11-17' , '17 ноября 2022'],
+    ['2022-11-18' , '18 ноября 2022'],
+    ['2022-11-19' , '19 ноября 2022'],
+    ['2022-11-20' , '20 ноября 2022'],
+    ['2022-11-21' , '21 ноября 2022'],
+    ['2022-11-22' , '22 ноября 2022'],
+    ['2022-11-23' , '23 ноября 2022'],
+    ['2022-11-24' , '24 ноября 2022'],
+    ['2022-11-25' , '25 ноября 2022'],
+    ['2022-11-26' , '26 ноября 2022'],
+    ['2022-11-27' , '27 ноября 2022'],
+    ['2022-11-28' , '28 ноября 2022'],
+    ['2022-11-29' , '29 ноября 2022'],
+    ['2022-11-30' , '30 ноября 2022']
+];
+let dataM = new Date();
+let monthM = dataM.getMonth()+1;
+let dayM = dataM.getDate()-1;
+let fullDateM = dataM.getFullYear() + '-' +
+((''+monthM).length<span style="color: #009900;">&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + monthM + <span style="color: #ff0000;">'-'</span> +</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">''</span>+dayM<span style="color: #66cc66;">&#41;</span>.length&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + dayM;</span>
+<span style="color: #009900;">let currentDate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span>fullDateM<span style="color: #66cc66;">&#41;</span>; var findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">''</span>;</span>
+<span style="color: #009900;">$.each<span style="color: #66cc66;">&#40;</span>daTeMass, function<span style="color: #66cc66;">&#40;</span> key, <span style="color: #000066;">value</span> <span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">let checkdate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span><span style="color: #000066;">value</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">0</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>checkdate &lt;<span style="color: #66cc66;">=</span> currentDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key+<span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>else<span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key<span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;  </span>
+<span style="color: #009900;">    return false;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>!findDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span>findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">&quot;...soon&quot;</span><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">//</span>Выводим нужную дату из списка</span>
+<span style="color: #009900;">$<span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'.t182__descr'</span><span style="color: #66cc66;">&#41;</span>.<span style="color: #000066;">text</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'Ответьте на несколько вопросов и мы подберем для вас самые лучшие варианты на '</span>+findDate<span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></code>	
+
+  					</div>
+  					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><br><br>
+                        <button class="but_cop" onclick="copyr1()" id="copyy1">Скопировать</button><br><br>
+  						<code class="html5" id="dec" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span>&gt;</span>
+$(document).ready(function() {
+//Создаём список дат формата Y-M-D
+&nbsp;
+let daTeMass = [ 
+    ['2022-12-01' , '1 декабря 2022'],
+    ['2022-12-02' , '2 декабря 2022'],
+    ['2022-12-03' , '3 декабря 2022'],
+    ['2022-12-04' , '4 декабря 2022'],
+    ['2022-12-05' , '5 декабря 2022'],
+    ['2022-12-07' , '6 декабря 2022'],
+    ['2022-12-07' , '7 декабря 2022'],
+    ['2022-12-08' , '8 декабря 2022'],
+    ['2022-12-09' , '9 декабря 2022'],
+    ['2022-12-10' , '10 декабря 2022'],
+    ['2022-12-11' , '11 декабря 2022'],
+    ['2022-12-12' , '12 декабря 2022'],
+    ['2022-12-13' , '13 декабря 2022'],
+    ['2022-12-14' , '14 декабря 2022'],
+    ['2022-12-15' , '15 декабря 2022'],
+    ['2022-12-16' , '16 декабря 2022'],
+    ['2022-12-17' , '17 декабря 2022'],
+    ['2022-12-18' , '18 декабря 2022'],
+    ['2022-12-19' , '19 декабря 2022'],
+    ['2022-12-20' , '20 декабря 2022'],
+    ['2022-12-21' , '21 декабря 2022'],
+    ['2022-12-22' , '22 декабря 2022'],
+    ['2022-12-23' , '23 декабря 2022'],
+    ['2022-12-24' , '24 декабря 2022'],
+    ['2022-12-25' , '25 декабря 2022'],
+    ['2022-12-26' , '26 декабря 2022'],
+    ['2022-12-27' , '27 декабря 2022'],
+    ['2022-12-28' , '28 декабря 2022'],
+    ['2022-12-29' , '29 декабря 2022'],
+    ['2022-12-30' , '30 декабря 2022'],
+    ['2022-12-31' , '31 декабря 2022']
+];
+let dataM = new Date();
+let monthM = dataM.getMonth()+1;
+let dayM = dataM.getDate()-1;
+let fullDateM = dataM.getFullYear() + '-' +
+((''+monthM).length<span style="color: #009900;">&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + monthM + <span style="color: #ff0000;">'-'</span> +</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">''</span>+dayM<span style="color: #66cc66;">&#41;</span>.length&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + dayM;</span>
+<span style="color: #009900;">let currentDate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span>fullDateM<span style="color: #66cc66;">&#41;</span>; var findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">''</span>;</span>
+<span style="color: #009900;">$.each<span style="color: #66cc66;">&#40;</span>daTeMass, function<span style="color: #66cc66;">&#40;</span> key, <span style="color: #000066;">value</span> <span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">let checkdate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span><span style="color: #000066;">value</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">0</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>checkdate &lt;<span style="color: #66cc66;">=</span> currentDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key+<span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>else<span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key<span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;  </span>
+<span style="color: #009900;">    return false;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>!findDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span>findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">&quot;...soon&quot;</span><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">//</span>Выводим нужную дату из списка</span>
+<span style="color: #009900;">$<span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'.t182__descr'</span><span style="color: #66cc66;">&#41;</span>.<span style="color: #000066;">text</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'Ответьте на несколько вопросов и мы подберем для вас самые лучшие варианты на '</span>+findDate<span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></code>
+
+  					</div>
+  					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"> <br><br>
+                        <button class="but_cop" onclick="copyr2()" id="copyy2">Скопировать</button> <br> <br>
+  						<code class="html5" id="yan" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span>&gt;</span>
+$(document).ready(function() {
+//Создаём список дат формата Y-M-D
+&nbsp;
+let daTeMass = [ 
+    ['2023-01-01' , '1 января 2023'],
+    ['2023-01-02' , '2 января 2023'],
+    ['2023-01-03' , '3 января 2023'],
+    ['2023-01-04' , '4 января 2023'],
+    ['2023-01-05' , '5 января 2023'],
+    ['2023-01-07' , '6 января 2023'],
+    ['2023-01-07' , '7 января 2023'],
+    ['2023-01-08' , '8 января 2023'],
+    ['2023-01-09' , '9 января 2023'],
+    ['2023-01-10' , '10 января 2023'],
+    ['2023-01-11' , '11 января 2023'],
+    ['2023-01-12' , '12 января 2023'],
+    ['2023-01-13' , '13 января 2023'],
+    ['2023-01-14' , '14 января 2023'],
+    ['2023-01-15' , '15 января 2023'],
+    ['2023-01-16' , '16 января 2023'],
+    ['2023-01-17' , '17 января 2023'],
+    ['2023-01-18' , '18 января 2023'],
+    ['2023-01-19' , '19 января 2023'],
+    ['2023-01-20' , '20 января 2023'],
+    ['2023-01-21' , '21 января 2023'],
+    ['2023-01-22' , '22 января 2023'],
+    ['2023-01-23' , '23 января 2023'],
+    ['2023-01-24' , '24 января 2023'],
+    ['2023-01-25' , '25 января 2023'],
+    ['2023-01-26' , '26 января 2023'],
+    ['2023-01-27' , '27 января 2023'],
+    ['2023-01-28' , '28 января 2023'],
+    ['2023-01-29' , '29 января 2023'],
+    ['2023-01-30' , '30 января 2023'],
+    ['2023-01-31' , '31 января 2023']
+];
+let dataM = new Date();
+let monthM = dataM.getMonth()+1;
+let dayM = dataM.getDate()-1;
+let fullDateM = dataM.getFullYear() + '-' +
+((''+monthM).length<span style="color: #009900;">&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + monthM + <span style="color: #ff0000;">'-'</span> +</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">''</span>+dayM<span style="color: #66cc66;">&#41;</span>.length&lt;<span style="color: #cc66cc;">2</span> ? <span style="color: #ff0000;">'0'</span> : <span style="color: #ff0000;">''</span><span style="color: #66cc66;">&#41;</span> + dayM;</span>
+<span style="color: #009900;">let currentDate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span>fullDateM<span style="color: #66cc66;">&#41;</span>; var findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">''</span>;</span>
+<span style="color: #009900;">$.each<span style="color: #66cc66;">&#40;</span>daTeMass, function<span style="color: #66cc66;">&#40;</span> key, <span style="color: #000066;">value</span> <span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">let checkdate <span style="color: #66cc66;">=</span> new Date<span style="color: #66cc66;">&#40;</span><span style="color: #000066;">value</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">0</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>checkdate &lt;<span style="color: #66cc66;">=</span> currentDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key+<span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>else<span style="color: #66cc66;">&#123;</span></span>
+<span style="color: #009900;">    findDate <span style="color: #66cc66;">=</span> daTeMass<span style="color: #66cc66;">&#91;</span>key<span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>;  </span>
+<span style="color: #009900;">    return false;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;">if<span style="color: #66cc66;">&#40;</span>!findDate<span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#123;</span>findDate <span style="color: #66cc66;">=</span> <span style="color: #ff0000;">&quot;...soon&quot;</span><span style="color: #66cc66;">&#125;</span>;</span>
+<span style="color: #009900;"><span style="color: #66cc66;">//</span>Выводим нужную дату из списка</span>
+<span style="color: #009900;">$<span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'.t182__descr'</span><span style="color: #66cc66;">&#41;</span>.<span style="color: #000066;">text</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'Ответьте на несколько вопросов и мы подберем для вас самые лучшие варианты на '</span>+findDate<span style="color: #66cc66;">&#41;</span>;</span>
+&nbsp;
+<span style="color: #009900;"><span style="color: #66cc66;">&#125;</span><span style="color: #66cc66;">&#41;</span>;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></code>
+
+  					</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		function generate () {
+	var pop1 = document.getElementById('pop').value;
+	document.getElementById('newpop').innerHTML = pop1;
+
+
+	var forma1 = document.getElementById('forma').value;
+	document.getElementById('newforma').innerHTML = forma1;
+
+}
+
+	</script>
+
+	<script>
+	$('#copyy').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#nov').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+</script>
+
+	<script>
+	$('#copyy1').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#dec').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+</script>
+
+	<script>
+	$('#copyy2').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#yan').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+</script>
+	
+</body>
+</html>		

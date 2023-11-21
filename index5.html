@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Закреп Зеро блока</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<br><br>
+        <div class="row">
+            <br><br>
+            <a style="color: white !important; font-size: 16px;" href="index.html">&lt;- НАЗАД</a>
+        </div>
+
+		<div class="row">
+
+		<div class="">
+			<br>
+				<input placeholder="id zero блока" type="text" id="pop">
+			<br><br>
+		</div>
+
+			<div class="row">
+				<div class="col-12">
+					<button class="but_gen" onclick="generate()">Сгенерировать</button>
+					<button class="but_cop" onclick="copyr()" id="copyy">Скопировать</button>
+				</div>
+			</div>
+
+
+			<div class="col-12">
+				<p>Код:</p>
+				
+					<code id="res2" class="css" style="font-family:monospace;">&lt;style<span style="color: #00AA00;">&gt;</span>
+						<span style="color: #cc00cc;"><span id="newpop"></span> <span style="color: #00AA00;">&#123;</span>
+							<span style="color: #fff; font-weight: bold;">position</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">fixed</span><span style="color: #00AA00;">;</span>
+							<span style="color: #fff; font-weight: bold;">top</span><span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">0</span><span style="color: #00AA00;">;</span>
+							<span style="color: #fff; font-weight: bold;">left</span><span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">0</span><span style="color: #00AA00;">;</span>
+							<span style="color: #fff; font-weight: bold;">width</span><span style="color: #00AA00;">:</span> <span style="color: #933;">100%</span><span style="color: #00AA00;">;</span>
+							<span style="color: #fff; font-weight: bold;">z-index</span><span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">9998</span><span style="color: #00AA00;">;</span>
+						<span style="color: #00AA00;">&#125;</span>
+						&lt;/style<span style="color: #00AA00;">&gt;</span></code>
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+
+		function generate () {
+	var pop1 = document.getElementById('pop').value;
+	document.getElementById('newpop').innerHTML = pop1;
+}
+
+	</script>
+
+	<script>
+	$('#copyy').click(function() {
+	    var $temp = $("<input>");
+	    $("body").append($temp);
+	    $temp.val($('#res2').text()).select();
+	    document.execCommand("copy");
+	    $temp.remove();
+
+	    $(this).text('У тебя все получилось');
+	});
+</script>
+	
+</body>
+</html>
